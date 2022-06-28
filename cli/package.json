@@ -4,6 +4,9 @@
   "description": "",
   "type": "commonjs",
   "main": "index.js",
+  "bin": {
+    "gowork": "./bin/cli.js"
+  },
   "directories": {
     "lib": "lib"
   },
@@ -14,6 +17,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "^9.3.0"
+    "chalk": "^4.1.2",
+    "commander": "^9.3.0",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.0"
   }
 }

@@ -22,7 +22,8 @@ const create = async (name) => {
       type: 'list',
       message: '请选择所用的打包方式：',
       choices: [
-        { name: 'webpack', value: 'webpack'}
+        { name: 'webpack', value: 'webpack'},
+        { name: 'vite', value: 'vite'}
       ]
     }
   ])

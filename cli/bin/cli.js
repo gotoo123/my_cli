@@ -4,8 +4,9 @@ const {program} = require('commander');
 
 program
   .command('create <name>')
-  .action(async (name) => {
-      await require('../lib/create')(name)
+  .option('--ts')
+  .action(async (name, options) => {
+      await require('../lib/create')(name, options)
     }
   )
 

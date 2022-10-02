@@ -4,7 +4,7 @@ const fs = require('fs');
 const fse = require('fs-extra');
 const chalk = require('chalk');
 
-const create = async (name) => {
+const create = async (name, options) => {
   const { projectType } = await inquirer.prompt([
     {
       name: 'projectType',
@@ -28,7 +28,7 @@ const create = async (name) => {
     }
   ])
 
-  const templatePath = path.resolve(__dirname, `../template/${projectType}-${bundleType}`);
+  const templatePath = path.resolve(__dirname, `../template/${options.ts ? 'ts/' : ''}${projectType}-${bundleType}`);
   const root = process.cwd();
   const projectPath = path.resolve(root, `./${name}`);
 

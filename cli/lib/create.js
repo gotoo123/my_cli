@@ -5,30 +5,10 @@ const fse = require('fs-extra');
 const chalk = require('chalk');
 
 const create = async (name, options) => {
-  const { projectType } = await inquirer.prompt([
-    {
-      name: 'projectType',
-      type: 'list',
-      message: '请选择所要创建项目类型：',
-      choices: [
-        { name: 'react', value: 'react'}
-      ]
-    }
-  ]);
+  const buildType = options.buildType || 'webpack';
+  const template = options.template || 'react-ts';
+  const templatePath = path.resolve(__dirname, `../template/${buildType}/${template}`)
 
-  const { bundleType } =  await inquirer.prompt([
-    {
-      name: 'bundleType',
-      type: 'list',
-      message: '请选择所用的打包方式：',
-      choices: [
-        { name: 'webpack', value: 'webpack'},
-        { name: 'vite', value: 'vite'}
-      ]
-    }
-  ])
-
-  const templatePath = path.resolve(__dirname, `../template/${options.ts ? 'ts/' : ''}${projectType}-${bundleType}`);
   const root = process.cwd();
   const projectPath = path.resolve(root, `./${name}`);
 

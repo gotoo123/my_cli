@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-const {program} = require('commander');
+const { program } = require('commander');
+const chalk = require('chalk');
 
 program
   .command('create <name>')
@@ -10,5 +11,14 @@ program
       await require('../lib/create')(name, options)
     }
   )
+
+program.addHelpText('after',
+`
+Example:
+  ${chalk.yellow('gowork create <name> --buildType <buildType> --template <template>')}
+Now Support:
+  ${chalk.yellow('- buildType: webpack or vite')}
+  ${chalk.yellow('- template: react / react-ts / vue')}
+`);
 
 program.parse();

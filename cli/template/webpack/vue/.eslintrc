@@ -1,0 +1,7 @@
+{
+  "root": true,
+  "extends": [
+    "eslint-config-airbnb-base",
+    "plugin:vue/vue3-recommended"
+  ]
+}

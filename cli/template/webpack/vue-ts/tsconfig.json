@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",  // 指定es目标版本
+    "allowJs": true,     // 是否允许js
+    "useDefineForClassFields": true,
+    "module": "ESNext",  // 指定生成那个模块代码
+    "moduleResolution": "Node",
+    "strict": true,   // 是否启动所有严格类型检查检测选项，能用true最好，新手建议false
+    "noImplicitAny" : false,  // 允许隐式any类型，true：不允许
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true, // 允许使用import方式导入
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "baseUrl": ".",  // paths路径解析起点
+    "paths": {  // 设置路径别名 可以配置多个
+      "@/*": ["./src/*"],
+    },
+  },
+  "include": [
+    "src/**/*",
+  ],
+}

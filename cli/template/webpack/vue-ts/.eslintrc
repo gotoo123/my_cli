@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "extends": [
+    "eslint-config-airbnb-base",
+    "plugin:vue/vue3-recommended",
+    ""
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+  "rules": {
+    "vue/script-indent": ["error", 2, { "baseIndent": 1 }],
+    "no-console": "off",
+    "linebreak-style": "off", // 检查LF或CRLF
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "semi": [1, "always"],
+    "quotes": [1, "single"]
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "indent": "off"
+      }
+    }
+  ]
+}

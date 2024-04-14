@@ -1,6 +1,8 @@
+import './App.less';
+
 const App = () => {
   return (
-    <div>hello vite</div>
+    <div className={'App'}>hello vite</div>
   )
 }
 

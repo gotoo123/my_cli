@@ -18,7 +18,7 @@ Example:
   ${chalk.yellow('gowork create <name> --buildType <buildType> --template <template>')}
 Now Support:
   ${chalk.yellow('- buildType: webpack or vite')}
-  ${chalk.yellow('- template: react / react-ts / vue')}
+  ${chalk.yellow('- template: react / react-ts / vue / vue-ts')}
 `);
 
 program.parse();
